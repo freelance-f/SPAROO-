@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPAROO | Smart Proximity Payments</title>
+  <meta
+    name="description"
+    content="SPAROO is a smart proximity-based payment system that lets customers pay auto drivers and local merchants instantly without QR codes or manual UPI entry."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script type="module" src="hero-scene.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="SPAROO home">
+          <img src="assets/sparoo_mark_transparent.png" alt="SPAROO logo mark">
+          <span>SPAROO</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#problem">Problem</a>
+          <a href="#solution">Solution</a>
+          <a href="#product">Product</a>
+          <a href="#security">Security</a>
+          <a href="#vision">Vision</a>
+        </nav>
+
+        <div class="header-badge" aria-label="Product category">
+          <span class="status-dot"></span>
+          Offline commerce infra
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero-section">
+        <div class="hero-backdrop" aria-hidden="true">
+          <span class="hero-aurora hero-aurora-one"></span>
+          <span class="hero-aurora hero-aurora-two"></span>
+          <span class="hero-aurora hero-aurora-three"></span>
+          <span class="hero-scan-track hero-scan-track-one"></span>
+          <span class="hero-scan-track hero-scan-track-two"></span>
+        </div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Smart proximity payments for India</p>
+            <img class="hero-logo" src="assets/sparoo_full_transparent.png" alt="SPAROO wordmark">
+            <h1>Enter. Detect. Pay Instantly.</h1>
+            <p class="hero-text">
+              Seamless payments for real-world mobility — no QR codes, no typing, no delays. Just
+              walk in and pay.
+            </p>
+
+            <div class="hero-inline-list" aria-label="SPAROO use cases">
+              <span>Autos</span>
+              <span>Street merchants</span>
+              <span>Repeat local payments</span>
+            </div>
+
+            <article class="hero-signal-card">
+              <span class="panel-kicker">Live SPAROO stack</span>
+              <strong>BLE detection, verified merchant identity, and secure settlement in a single flow.</strong>
+              <p>Built for fast offline payment moments where the right merchant needs to appear instantly.</p>
+            </article>
+
+            <div class="hero-strip" aria-label="SPAROO value highlights">
+              <article class="hero-stat">
+                <strong>&lt; 2s</strong>
+                <span>Merchant detection for ride-end and local checkout moments</span>
+              </article>
+              <article class="hero-stat">
+                <strong>No QR</strong>
+                <span>Discovery starts from proximity, not printed stands or stickers</span>
+              </article>
+              <article class="hero-stat">
+                <strong>Razorpay</strong>
+                <span>Trusted payment rails layered behind SPAROO’s product experience</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-canvas" id="hero-canvas" aria-hidden="true"></div>
+            <div class="hero-gridlines" aria-hidden="true"></div>
+
+            <div class="hero-visual-shell">
+              <div class="signal-panel">
+                <div class="signal-copy">
+                  <span class="signal-label">SPAROO network live</span>
+                  <strong>The right auto or merchant appears the moment the payment starts.</strong>
+                  <p>Purpose-built for real Indian street commerce, not generic scan-and-search flows.</p>
+                </div>
+                <div class="signal-rings" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="phone-stage">
+                <div class="beacon-pod">
+                  <span class="pod-label">SPAROO Beacon</span>
+                  <strong>Broadcasting verified merchant identity</strong>
+                  <p>Installed with the driver or merchant to make nearby payments instantly discoverable.</p>
+                </div>
+
+                <div class="floating-chip chip-auto">
+                  <div class="chip-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="presentation">
+                      <path d="M16 36h32l4 8H12l4-8Z"></path>
+                      <path d="M22 24h20l6 10H16l6-10Z"></path>
+                      <circle cx="20" cy="47" r="4"></circle>
+                      <circle cx="44" cy="47" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="chip-kicker">Auto context</span>
+                    <strong>Ride ends, SPAROO detects the right driver, and payment becomes obvious.</strong>
+                  </div>
+                </div>
+
+                <div class="phone-motion">
+                  <div class="phone-shell">
+                    <span class="phone-side-button phone-side-button-top"></span>
+                    <span class="phone-side-button phone-side-button-mid"></span>
+                    <span class="phone-side-button phone-side-button-low"></span>
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                      <div class="screen-top screen-top-brand">
+                        <div class="screen-brand">
+                          <img src="assets/sparoo_mark_transparent.png" alt="SPAROO">
+                          <div>
+                            <strong>SPAROO</strong>
+                            <span>AutoPay Session</span>
+                          </div>
+                        </div>
+                        <span class="screen-security">Secure via Razorpay</span>
+                      </div>
+
+                      <div class="screen-highlight screen-highlight-primary">
+                        <span class="screen-badge">SPAROO detected nearby</span>
+                        <h3>Ravi Auto AP39AR1699</h3>
+                        <p>Verified auto profile</p>
+                        <span>2.3m away &middot; BLE matched &middot; Merchant verified</span>
+                      </div>
+
+                      <div class="mockup-radar">
+                        <div class="mockup-radar-ring mockup-radar-ring-one"></div>
+                        <div class="mockup-radar-ring mockup-radar-ring-two"></div>
+                        <div class="mockup-radar-ring mockup-radar-ring-three"></div>
+                        <div class="mockup-radar-core">S</div>
+                        <div class="mockup-radar-tag mockup-radar-user">You</div>
+                        <div class="mockup-radar-tag mockup-radar-auto">Auto</div>
+                        <div class="mockup-radar-path"></div>
+                      </div>
+
+                      <div class="screen-duo screen-duo-compact">
+                        <div class="screen-card compact">
+                          <div class="screen-icon">S</div>
+                          <div>
+                            <p>SPAROO match</p>
+                            <strong>Driver verified</strong>
+                          </div>
+                        </div>
+
+                        <div class="screen-card compact">
+                          <div class="screen-icon screen-icon-soft">&#8377;</div>
+                          <div>
+                            <p>Payment state</p>
+                            <strong>Ready to pay</strong>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="fare-card">
+                        <div class="fare-row">
+                          <span>Trip fare</span>
+                          <strong>&#8377;132</strong>
+                        </div>
+                        <div class="fare-row">
+                          <span>Merchant</span>
+                          <strong>Partner #A145</strong>
+                        </div>
+                      </div>
+
+                      <div class="payment-card payment-card-compact">
+                        <div class="payment-row">
+                          <span>Settlement</span>
+                          <strong>UPI via Razorpay</strong>
+                        </div>
+                        <span class="payment-status-chip">No QR scan required</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="floating-chip chip-success">
+                  <span class="chip-kicker">Payment success</span>
+                  <strong>Money reaches the merchant immediately after confirmation.</strong>
+                </div>
+
+                <div class="floating-chip chip-rail">
+                  <span class="chip-kicker">Settlement rail</span>
+                  <strong>Razorpay handles the payment while SPAROO owns merchant discovery.</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container hero-marquee reveal">
+          <div class="hero-marquee-track">
+            <span>Auto Rides</span>
+            <span>Street Vendors</span>
+            <span>Kirana Stores</span>
+            <span>Parking Booths</span>
+            <span>Neighborhood Commerce</span>
+            <span>Fleet Rollouts</span>
+            <span>Auto Rides</span>
+            <span>Street Vendors</span>
+            <span>Kirana Stores</span>
+            <span>Parking Booths</span>
+            <span>Neighborhood Commerce</span>
+            <span>Fleet Rollouts</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="container section-frame">
+          <div class="section-heading reveal">
+            <p class="section-label">Problem</p>
+            <h2>Payments Are Still Broken in the Real World</h2>
+            <p class="section-copy">
+              Scanning QR codes, entering UPI IDs, and waiting for confirmations slows everything down.
+              In fast-moving environments like autos and street commerce, payments should be instant
+              — not a process.
+            </p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="feature-card reveal">
+              <span class="card-index">01</span>
+              <h3>QR codes go missing</h3>
+              <p>Printed stands tear, fade, or never show up where the payment moment happens.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-index">02</span>
+              <h3>Manual UPI entry is slow</h3>
+              <p>Typing IDs in an auto or on a crowded roadside adds friction to every ride and sale.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-index">03</span>
+              <h3>People hesitate mid-payment</h3>
+              <p>Customers double-check names, merchants repeat details, and queues begin to form.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-index">04</span>
+              <h3>Local commerce needs speed</h3>
+              <p>Autos, small shops, and vendors need a payment flow optimized for quick, repeat use.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="solution">
+        <div class="container split-grid section-frame section-frame-featured">
+          <div class="section-heading reveal">
+            <p class="section-label">Solution</p>
+            <h2>Meet SPAROO — Payments That Move With You</h2>
+            <p class="section-copy">
+              SPAROO eliminates friction from everyday payments.
+              No scanning. No manual entry. Just enter, detect, and pay instantly.
+            </p>
+
+            <div class="flow-pills" aria-label="Solution flow">
+              <span>Enter auto</span>
+              <span>Detect</span>
+              <span>Pay</span>
+              <span>Done</span>
+            </div>
+          </div>
+
+          <div class="solution-panel reveal">
+            <article class="solution-card">
+              <span class="solution-tag">Merchant layer</span>
+              <h3>BLE device installed with the partner</h3>
+              <p>
+                A compact SPAROO device broadcasts a secure merchant identity so the right payment
+                endpoint is always nearby and discoverable.
+              </p>
+            </article>
+
+            <article class="solution-card">
+              <span class="solution-tag">Customer layer</span>
+              <h3>App detects and verifies automatically</h3>
+              <p>
+                The customer sees merchant details instantly, confirms the amount, and pays without
+                hunting for a QR sticker or typing anything.
+              </p>
+            </article>
+
+            <div class="solution-rail" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="container section-frame">
+          <div class="section-heading reveal">
+            <p class="section-label">How It Works</p>
+            <h2>Designed for a Single, Seamless Payment Motion</h2>
+            <p class="section-copy">
+              From entering a vehicle to completing payment — everything happens automatically in
+              seconds.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card reveal">
+              <span class="step-number">1</span>
+              <h3>Device broadcasts ID</h3>
+              <p>Each driver or merchant carries a SPAROO device that shares a secure BLE identity.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">2</span>
+              <h3>App detects nearby merchant</h3>
+              <p>The customer app listens for nearby verified SPAROO devices and matches the closest one.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">3</span>
+              <h3>User taps pay</h3>
+              <p>The app shows merchant details, the customer confirms, and the payment can begin instantly.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">4</span>
+              <h3>Payment via Razorpay</h3>
+              <p>Settlement runs on trusted payment rails while SPAROO removes the discovery friction.</p>
+            </article>
+            <article class="step-card reveal">
+              <span class="step-number">5</span>
+              <h3>Merchant receives money</h3>
+              <p>The partner gets paid immediately and sees the transaction in their dashboard.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="product">
+        <div class="container section-frame section-frame-featured">
+          <div class="section-heading reveal">
+            <p class="section-label">Product</p>
+            <h2>Two Apps. One Seamless Transaction.</h2>
+            <p class="section-copy">
+              A powerful connection between customer and partner apps ensures fast, reliable, and
+              real-time payments.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-panel reveal">
+              <div class="panel-header">
+                <span class="panel-kicker">Customer App</span>
+                <h3>Pay the nearest merchant without QR friction</h3>
+              </div>
+              <div class="mini-screen">
+                <div class="mini-screen-top">
+                  <span>Nearby now</span>
+                  <strong>SPAROO</strong>
+                </div>
+                <div class="mini-card active">
+                  <span>Detected</span>
+                  <strong>Auto Ravi Travels</strong>
+                  <p>Verified merchant &middot; Ready for payment</p>
+                </div>
+                <div class="mini-card">
+                  <span>Shortcut</span>
+                  <strong>Pay recent partner</strong>
+                  <p>Useful for daily commute and repeat merchants</p>
+                </div>
+              </div>
+              <ul class="panel-list">
+                <li>Auto detection when the customer reaches the payment zone</li>
+                <li>Quick payment confirmation with merchant details</li>
+                <li>No QR search, no manual UPI entry, no guesswork</li>
+              </ul>
+            </article>
+
+            <article class="product-panel reveal">
+              <div class="panel-header">
+                <span class="panel-kicker">Partner App</span>
+                <h3>Receive payments, track collections, and manage SPAROO devices</h3>
+              </div>
+              <div class="mini-screen">
+                <div class="mini-screen-top">
+                  <span>Today</span>
+                  <strong>Partner Console</strong>
+                </div>
+                <div class="mini-stat-row">
+                  <div class="mini-stat">
+                    <span>Collections</span>
+                    <strong>&#8377;4,820</strong>
+                  </div>
+                  <div class="mini-stat">
+                    <span>Device</span>
+                    <strong>Online</strong>
+                  </div>
+                </div>
+                <div class="mini-card active">
+                  <span>Operations</span>
+                  <strong>Beacon battery healthy</strong>
+                  <p>Manage driver and merchant device state in one operations layer</p>
+                </div>
+                <div class="mini-card">
+                  <span>Payout view</span>
+                  <strong>Live collections by vehicle or location</strong>
+                  <p>Perfect for autos, local merchant clusters, and city rollout dashboards</p>
+                </div>
+              </div>
+              <ul class="panel-list">
+                <li>Receive instant payments and review live transaction history</li>
+                <li>Track collections by shift, day, fleet, or merchant location</li>
+                <li>Provision and monitor SPAROO devices across autos and partner merchants</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why-sparoo">
+        <div class="container section-frame">
+          <div class="section-heading reveal">
+            <p class="section-label">Why SPAROO</p>
+            <h2>Built for India’s Real-World Payment Conditions</h2>
+            <p class="section-copy">
+              Low network. High movement. Real-time interactions.
+              SPAROO is designed to perform reliably where traditional payment systems fail.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <article class="why-card reveal">
+              <h3>No QR required</h3>
+              <p>Payments start from proximity, not printed stickers.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Faster than traditional UPI</h3>
+              <p>Discovery happens instantly so the user only confirms and pays.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Offline-ready detection layer</h3>
+              <p>BLE discovery can work locally even before the online payment handoff begins.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>India-first use cases</h3>
+              <p>Purpose-built for autos, kiranas, kiosks, and informal urban commerce.</p>
+            </article>
+            <article class="why-card reveal">
+              <h3>Scales to millions of merchants</h3>
+              <p>The device-plus-software model is designed for large deployment footprints.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="business-model">
+        <div class="container section-frame">
+          <div class="section-heading reveal">
+            <p class="section-label">Business Model</p>
+            <h2>Revenue That Scales With Every Transaction</h2>
+            <p class="section-copy">
+              A simple and predictable earning model that grows as usage increases — built for
+              long-term scalability.
+            </p>
+          </div>
+
+          <div class="business-grid">
+            <article class="business-card reveal">
+              <span class="business-tag">Core</span>
+              <h3>Commission on transactions</h3>
+              <p>Earn a small take rate every time SPAROO powers a successful local payment.</p>
+            </article>
+            <article class="business-card reveal">
+              <span class="business-tag">Expansion</span>
+              <h3>Fleet subscriptions</h3>
+              <p>Offer future SaaS-style plans for auto fleets, merchant networks, and operator dashboards.</p>
+            </article>
+            <article class="business-card reveal">
+              <span class="business-tag">Moat</span>
+              <h3>Device ecosystem</h3>
+              <p>Own the proximity layer through SPAROO hardware, provisioning, and partner operations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="security">
+        <div class="container security-wrap reveal section-frame section-frame-featured">
+          <div class="security-copy">
+            <p class="section-label">Security</p>
+            <h2>Fintech-Level Security in Every Transaction</h2>
+            <p class="section-copy">
+              Secure, reliable, and designed for trust — ensuring safe payments for both customers
+              and partners.
+            </p>
+          </div>
+
+          <div class="security-card">
+            <div class="security-list">
+              <article>
+                <h3>Secure payments via Razorpay</h3>
+                <p>Payment processing sits on trusted rails instead of a custom settlement layer.</p>
+              </article>
+              <article>
+                <h3>No bank data stored in-app</h3>
+                <p>SPAROO focuses on merchant detection and orchestration, not storing sensitive financial data.</p>
+              </article>
+              <article>
+                <h3>Encrypted communication</h3>
+                <p>Merchant identification and app communication are designed with secure transmission in mind.</p>
+              </article>
+              <article>
+                <h3>Verified merchants only</h3>
+                <p>Customers see recognized partner identities before initiating the payment flow.</p>
+              </article>
+            </div>
+
+            <div class="security-badge">
+              <span>Trust layer</span>
+              <strong>Identity, payment, and merchant verification in one product flow.</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="vision">
+        <div class="container section-frame">
+          <div class="vision-intro reveal">
+            <p class="section-label">Vision</p>
+            <h2>Building India’s Smart Payment Infrastructure for Offline Commerce</h2>
+            <p class="section-copy">
+              Powering the next generation of real-world transactions across mobility, retail, and
+              micro-businesses.
+            </p>
+          </div>
+
+          <div class="vision-grid">
+            <article class="vision-card reveal">
+              <h3>Autos</h3>
+              <p>Make the end of every ride feel instant, credible, and cashless.</p>
+            </article>
+            <article class="vision-card reveal">
+              <h3>Street vendors</h3>
+              <p>Enable mobile-first sellers to accept digital payments without extra payment choreography.</p>
+            </article>
+            <article class="vision-card reveal">
+              <h3>Small shops</h3>
+              <p>Speed up neighborhood checkout where repeat customers already expect convenience.</p>
+            </article>
+            <article class="vision-card reveal">
+              <h3>Future expansion</h3>
+              <p>Extend into fleets, transit-like environments, and dense local merchant clusters.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="cta">
+        <div class="container reveal">
+          <div class="cta-card">
+            <div class="cta-copy">
+              <p class="section-label">Get In Touch</p>
+              <h2>Join the Future of Real-World Payments</h2>
+              <p>
+                Partner with SPAROO to bring proximity-based payments to autos, merchants, and the
+                next generation of offline commerce in India.
+              </p>
+            </div>
+
+            <div class="contact-grid">
+              <a class="contact-card" href="mailto:hello@sparoo.in?subject=SPAROO%20Product%20Inquiry">
+                <span class="panel-kicker">General</span>
+                <strong>hello@sparoo.in</strong>
+                <p>Product conversations, design partner interest, and ecosystem introductions.</p>
+              </a>
+              <a class="contact-card" href="mailto:partners@sparoo.in?subject=SPAROO%20Partnership">
+                <span class="panel-kicker">Partnerships</span>
+                <strong>partners@sparoo.in</strong>
+                <p>Auto networks, merchant rollouts, fleet pilots, and city-scale deployment discussions.</p>
+              </a>
+              <div class="cta-note">
+                <span class="panel-kicker">Launch Focus</span>
+                <p>Starting with autos and dense local commerce, then expanding into broader offline payment clusters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="assets/sparoo_full_transparent.png" alt="SPAROO logo">
+          <p>Smart proximity payments for India's fastest local transactions.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#vision">About</a>
+          <a href="mailto:hello@sparoo.in">Contact</a>
+          <a href="mailto:legal@sparoo.in?subject=Privacy%20Policy">Privacy Policy</a>
+          <a href="mailto:legal@sparoo.in?subject=Terms%20of%20Use">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
